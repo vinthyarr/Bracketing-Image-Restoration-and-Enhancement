@@ -51,12 +51,19 @@ Training and Prediction
 Build the enhancement model using build_enhancement_model.
 Train the model on the preprocessed dataset.
 Test the model using the preprocess_and_predict function, which visualizes noisy and enhanced images side-by-side.
-Example Usage
-python
-Copy code
-# Build the model
-model = build_enhancement_model(input_shape=(256, 256, 3))
 
-# Preprocess and enhance images
-zip_file_path = "test_A.zip"  # Replace with your dataset path
+**Example Usage: **
+model = build_enhancement_model(input_shape=(256, 256, 3))
+zip_file_path = "test_A.zip" 
 preprocess_and_predict(zip_file_path, model)
+
+**Results**
+The model effectively reduces noise and enhances low-light images. Below is an example of the workflow:
+Original Image
+Noisy Image (e.g., Salt & Pepper Noise)
+Restored Image (via CNN)
+
+**Future Scope**
+Incorporate advanced loss functions like SSIM.
+Train on larger, diverse datasets for better generalization.
+Explore GAN-based architectures for improved restoration.
